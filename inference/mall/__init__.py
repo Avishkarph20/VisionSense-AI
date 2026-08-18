@@ -1,0 +1,1 @@
+"""Mall-specific inference service."""

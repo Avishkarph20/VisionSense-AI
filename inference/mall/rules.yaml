@@ -1,0 +1,16 @@
+# Edit these values to tune Mall detection behavior without changing Python code.
+shoplifting:
+  enabled: true
+  labels: [shoplift, shoplifting, theft, stealing]
+  min_confidence: 0.60
+  min_track_age_frames: 5
+  severity: high
+
+loitering:
+  enabled: true
+  labels: [person]
+  min_dwell_seconds: 30
+  severity: medium
+
+default:
+  severity: low
