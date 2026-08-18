@@ -1,0 +1,162 @@
+/* VisionSense AI - Enterprise Obsidian Dark Theme & Surveillance Utilities */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-obsidian: #0b0f17;
+  --bg-card: #111827;
+  --bg-card-hover: #161e2e;
+  --bg-panel: #0f1523;
+  --border-subtle: #1f293d;
+  --border-active: #374151;
+  --accent-red: #ef4444;
+  --accent-green: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-obsidian);
+  color: #f3f4f6;
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-header {
+  background: rgba(11, 15, 23, 0.90);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Bounding Box Animation & Scanner */
+.ai-bounding-box {
+  position: absolute;
+  border: 2px solid #ef4444;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.7), inset 0 0 10px rgba(239, 68, 68, 0.25);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+.ai-bounding-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+}
+
+.ai-bounding-box::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+}
+
+.ai-scanner-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.85), transparent);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.9);
+  animation: scan 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { top: 0%; opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { top: 100%; opacity: 0.2; }
+}
+
+/* Pulsing AI Radar Icon */
+@keyframes radar-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.pulse-radar {
+  animation: radar-pulse 2s infinite;
+}
+
+/* Video Canvas Simulated Grid */
+.surveillance-grid {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Keyframe Selection Border Glow */
+.keyframe-active {
+  border: 2px solid #ef4444 !important;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+  opacity: 1 !important;
+}
+
+/* Card Glow Accent Classes */
+.card-glow-red {
+  border-top: 2px solid #ef4444;
+  box-shadow: inset 0 1px 0 rgba(239, 68, 68, 0.25);
+}
+.card-glow-blue {
+  border-top: 2px solid #3b82f6;
+  box-shadow: inset 0 1px 0 rgba(59, 130, 246, 0.25);
+}
+.card-glow-green {
+  border-top: 2px solid #10b981;
+  box-shadow: inset 0 1px 0 rgba(16, 185, 129, 0.25);
+}
+.card-glow-orange {
+  border-top: 2px solid #f59e0b;
+  box-shadow: inset 0 1px 0 rgba(245, 158, 11, 0.25);
+}
+.card-glow-purple {
+  border-top: 2px solid #8b5cf6;
+  box-shadow: inset 0 1px 0 rgba(139, 92, 246, 0.25);
+}
+.card-glow-cyan {
+  border-top: 2px solid #06b6d4;
+  box-shadow: inset 0 1px 0 rgba(6, 182, 212, 0.25);
+}
+
+.font-mono-telemetry {
+  font-family: 'JetBrains Mono', monospace;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VisionSense AI - Enterprise Monitoring & Human Decision Console</title>
+  <meta name="description" content="AI-assisted surveillance monitoring platform for real-time threat evaluation, keyframe review, and human decision console.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="vendor/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              900: '#0b0f17',
+              800: '#111827',
+              700: '#161e2e',
+              600: '#1f293d',
+              500: '#374151',
+            },
+            brand: {
+              red: '#ef4444',
+              green: '#10b981',
+              amber: '#f59e0b',
+              cyan: '#06b6d4',
+              blue: '#3b82f6',
+              purple: '#8b5cf6',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- React 18 & ReactDOM UMD -->
+  <script src="vendor/react.js" crossorigin></script>
+  <script src="vendor/react-dom.js" crossorigin></script>
+  
+  <!-- Babel Standalone for JSX -->
+  <script src="vendor/babel.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="vendor/lucide.js"></script>
+
+  <!-- Chart.js for Reports Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-[#0b0f17] text-gray-100 antialiased min-h-screen">
+  <div id="root"></div>
+
+  <!-- Main React App Script -->
+  <script src="api.js?v=3"></script>
+  <script type="text/babel" src="app.js?v=4"></script>
+</body>
+</html>
